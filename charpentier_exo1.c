@@ -1,3 +1,22 @@
+// Exercice 1
+
+// Soit le programme essai.c suivant :
+// (voir plus bas)
+// L’exécution génère les traces suivantes. Commentez les résultats dans un fichier texte.
+// hello,
+// hello,
+// hello,
+// hello,
+// thread
+// thread
+// thread
+// thread
+// principal 1000
+// fils 1010
+// principal 3010
+// fils 3030
+
+
 #include <stdio.h>
 #include <pthread.h>
 

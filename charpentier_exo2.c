@@ -1,3 +1,27 @@
+// Exercice 2
+
+// Remarque :
+// « Chaque programme Unix possède des flux d'entrée-sortie ouverts pour lui. Par défaut, tout
+// processus se voit donc attribuer 3 flux d'entrée-sortie standard. Le flux d'entrée est appelé « entrée
+// standard » (standard input), le flux de sortie, « sortie standard » (standard output), et le flux d'erreur
+// est souvent appelé « erreur standard » (standard error). Ces noms sont abrégés dans les
+// dénominations symboliques de ces fichiers : stdin, stdout et stderr.
+// Il faut voir les entrées-sorties standard comme des "flux" d'octets qui sont disponibles en entrée ou
+// en sortie du processus. En entrée ces flux sont alimentés par un périphérique ou un fichier ou un
+// flux de sortie d'un autre processus. En sortie, le flux est traité par un périphérique ou dirigé vers un
+// fichier ou vers un flux d'entrée d'un autre processus.
+// Les flux standard sont fermés lors d'un appel à exit(3) ou lors d'une fin normale de programme. »
+// Construire un processus lourd avec 3 threads :
+// * le thread principal qui lance 2 threads auxiliaires en fournissant un message à chacun ;
+// * le premier thread écrit le message obtenu sur la sortie standard (stdout) et se termine par un appel
+// à pthread_exit en renvoyant la chaîne de caractères "Je suis A et j'ai fini\n" ;
+// * le second thread écrit le message obtenu sur la sortie d’erreur (stderr) et se termine en renvoyant
+// (par terminaison de sa fonction principale) la chaîne de caractères "Je suis B et j'ai fini\n" ;
+// Le thread principal attends la terminaison du second thread et affiche la chaîne renvoyée sur la
+// sortie standard puis il attends la terminaison du premier thread et affiche la chaîne renvoyée sur la
+// sortie d’erreur.
+
+
 #include <stdio.h>
 #include <pthread.h>
 
