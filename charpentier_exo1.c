@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <pthread.h>
 
-int i; // déclaration i entier
+int i; // déclaration i entier VARIABLE GLOBALE
 
 void addition() {
     i = i + 10;
