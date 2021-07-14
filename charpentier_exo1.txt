@@ -1,0 +1,7 @@
+L'exécution génère : 
+hello, thread principal 1000
+hello, thread principal 3010
+hello, thread fils 1010
+hello, thread fils 3030
+
+Voir les commentaires sur le fichier .c
